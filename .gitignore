@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.log
+*.ehpk
+*.local
+.vite/
+.DS_Store

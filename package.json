@@ -1,0 +1,33 @@
+{
+  "name": "level-x",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "LEVEL X - Even G2 AR alignment, reticle, composition and angle application",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "verify": "tsc --noEmit && vitest run && vite build",
+    "qr": "evenhub qr",
+    "pack": "evenhub pack app.json dist -o level-x.ehpk",
+    "pack:check": "evenhub pack app.json dist --check",
+    "simulator": "evenhub-simulator http://127.0.0.1:5180"
+  },
+  "dependencies": {
+    "@evenrealities/even_hub_sdk": "^0.0.16",
+    "@evenrealities/evenhub-simulator": "^0.9.5"
+  },
+  "devDependencies": {
+    "@evenrealities/evenhub-cli": "^0.1.14",
+    "@types/node": "^22.10.2",
+    "jsdom": "^25.0.1",
+    "qrcode": "^1.5.4",
+    "typescript": "^5.9.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>LEVEL X</title>
+    <style>
+      :root {
+        --bg: #0b0f0c;
+        --panel: #141a16;
+        --panel2: #1b231d;
+        --line: #273028;
+        --fg: #e8f3ea;
+        --muted: #8aa892;
+        --accent: #39ff8a;
+        --accent-dim: #1f7a46;
+        --warn: #ffd23a;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: var(--bg); color: var(--fg);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+      #app { max-width: 540px; margin: 0 auto; padding: 16px; }
+      h1 { font-size: 24px; letter-spacing: 2px; margin: 8px 0 2px; color: var(--accent); }
+      .sub { color: var(--muted); margin: 0 0 14px; font-size: 13px; }
+      .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+        padding: 14px; margin-bottom: 12px; }
+      .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px;
+        color: var(--muted); margin: 0 0 10px; }
+      .rowline { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 6px 0; font-size: 14px; }
+      .label { color: var(--muted); font-size: 13px; }
+      .val { color: var(--fg); font-variant-numeric: tabular-nums; }
+      .grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .stat { background: var(--panel2); border-radius: 10px; padding: 10px; text-align: center; }
+      .big { font-size: 26px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }
+      .statusline { display: flex; align-items: center; gap: 10px; margin-top: 10px; font-size: 13px; }
+      .pill { padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 700;
+        background: var(--panel2); border: 1px solid var(--line); }
+      .pill.ok { color: var(--accent); border-color: var(--accent-dim); }
+      .pill.warn { color: var(--warn); border-color: #5a4d12; }
+      .previewwrap { margin-top: 12px; display: flex; justify-content: center; }
+      canvas.preview { width: 100%; max-width: 360px; image-rendering: pixelated;
+        background: #000; border: 1px solid var(--line); border-radius: 8px; aspect-ratio: 2 / 1; }
+      .btnrow { display: flex; flex-wrap: wrap; gap: 8px; }
+      button { background: var(--panel2); color: var(--fg); border: 1px solid var(--line);
+        border-radius: 9px; padding: 9px 12px; font-size: 13px; cursor: pointer; }
+      button:hover { border-color: var(--accent-dim); }
+      button.primary { background: var(--accent-dim); border-color: var(--accent); color: #eafff2; }
+      button.mode.active { background: var(--accent-dim); border-color: var(--accent); color: #eafff2; }
+      select, textarea, input[type="range"] { background: var(--panel2); color: var(--fg);
+        border: 1px solid var(--line); border-radius: 8px; padding: 6px; font-size: 13px; }
+      .sliderwrap { display: flex; align-items: center; gap: 8px; }
+      .out { color: var(--accent); min-width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+      pre.perf, pre.log { background: #0a0d0b; border: 1px solid var(--line); border-radius: 8px;
+        padding: 10px; font-size: 11px; color: var(--muted); overflow-x: auto; white-space: pre-wrap;
+        margin: 6px 0 0; }
+      .io { width: 100%; font-family: ui-monospace, monospace; font-size: 11px; }
+      .fatal { padding: 20px; }
+      .fatal pre { background: #0a0d0b; padding: 10px; border-radius: 8px; color: var(--warn);
+        white-space: pre-wrap; word-break: break-word; font-size: 12px; }
+      code { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <div id="app">Loading LEVEL X…</div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
