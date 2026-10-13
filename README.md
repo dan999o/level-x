@@ -1,12 +1,23 @@
 # LEVEL X
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-2ea44f.svg)](LICENSE)
+![Tests](https://img.shields.io/badge/tests-128%20passing-2ea44f.svg)
+![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178c6.svg)
+![Even Hub SDK](https://img.shields.io/badge/even__hub__sdk-0.0.16-blue.svg)
+
 An Even G2 augmented-reality **precision alignment, reticle, composition, and
 angle** application, with an optional voice assistant. Built on the official
 `@evenrealities/even_hub_sdk`. Runs fully **offline** — no account, no cloud.
 
-> Status: **MVP complete — simulator/mock-verified, physical-hardware validation
-> pending.** No claim of on-G2/R1 testing is made; see
+> Status: **Runs on real G2 hardware** — it loads, renders the alignment overlay
+> on the glasses, and responds to touch/R1 input. Accuracy tuning (IMU axis
+> mapping, sample rate, display layout) is still in progress; see
 > [`docs/HARDWARE_TEST_PLAN.md`](docs/HARDWARE_TEST_PLAN.md).
+
+![LEVEL X control panel with the live glasses overlay preview](docs/screenshot.png)
+
+<sup>The companion phone panel running offline (mock mode). The black-and-green
+tile is a live preview of exactly what is drawn on the G2 display.</sup>
 
 ## Modes
 - **Smart Level** — horizontal/vertical/gravity-relative leveling, 0.1° readout, adjustable tolerance, stable/hold indicators, persistent calibration.
